@@ -88,7 +88,7 @@ body {
     padding-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -105,9 +105,6 @@ body {
 }
 
 .modal {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
   background-color: #ffffff;
   position: absolute;
   top: 50%;
@@ -119,6 +116,7 @@ body {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -493,8 +491,6 @@ body {
 
 .menu-open-btn {
   margin-left: auto;
-  width: 40px;
-  height: 40px;
   border: 0px solid;
   background-color: transparent;
   position: absolute;
@@ -536,7 +532,7 @@ body {
 .menu-close-btn {
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
   border-radius: 50%;
   background-color: transparent;
   position: absolute;
@@ -690,24 +686,26 @@ body {
 
 .hero-title {
   font-weight: 900;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  max-width: 696px;
+  width: 360px;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .hero-title {
     font-size: 26px;
+    width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
+    width: 696px;
   }
 }
 
@@ -762,10 +760,14 @@ body {
 
 .section-one-item {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .section-one-item {
     width: calc((100% - 30px) / 2);
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -775,6 +777,7 @@ body {
 }
 
 .section-one-link {
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background: #f5f4fa;
@@ -840,12 +843,13 @@ body {
 .employees__title {
   font-size: 28px;
   line-height: 1.18;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .employees__title {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 
@@ -909,12 +913,13 @@ body {
 .client-tile {
   font-size: 28px;
   line-height: 1.18;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .client-tile {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 
@@ -962,6 +967,8 @@ body {
 
 .footer {
   background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__section {

@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/mainn.min.css" />
   </head>
@@ -31,7 +27,7 @@
           <a class="logo navigation__logo link" href="link">Web<span class="webstudio-top">Studio</span></a>
           <ul class="menu list">
             <li class="menu__item">
-              <a class="menu__link " href="./index.html">Студія</a>
+              <a class="menu__link" href="./index.html">Студія</a>
             </li>
             <li class="menu__item">
               <a class="menu__link current" href="">Портфоліо</a>
@@ -57,6 +53,68 @@
                 +38 096 111 11 11</a>
             </li>
           </ul>
+        </div>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="icon-menu" width="40" height="40">
+            <use href="./img/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+    
+      </div>
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="conteiner">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn" data-menu-close>
+              <svg class="modal-close-icon" width="30" height="30">
+                <use href="./img/symbol-defs.svg#icon-close-black"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link " href="./index.html">Cтудія</a>
+                </li>
+                <li class=" mobile-menu__item">
+                  <a class="mobile-menu__link " href="">Портфоліо</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link " href="">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob__connectt__list list">
+              <li class="mob__connect__item">
+                <a class="mob__connect__tel link" href="tel:+380961111111">
+                  +38 096 111 11 11</a>
+              </li>
+              <li class="mob__connect__item">
+                <a class="mob__connect__mail link" href="mailtoo:info@devstudio.com">
+                  info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mob-socials list">
+              <li class="mob-socials__item">
+                <a class="mob-socials__link" href="">instagram
+    
+                </a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link " href="">twitter
+    
+                </a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link " href="">facebook
+    
+                </a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link " href="">linkedin
+    
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +147,15 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/1.jpg" alt="фото" width="370" height="294" />
+                    <picture>
+                      <source srcset="./portfolio/1.jpg 1x, 
+                                  ./portfolio/1-2x.jpg 2x" media="(min-width: 1200px)" />
+                      <source srcset="./portfolio/1tab.jpg 1x, 
+                                  ./portfolio/1tab-2x.jpg 2x" media="(min-width: 768px)" />
+                      <source srcset="./portfolio/1mob.jpg 1x, 
+                                  ./portfolio/1mob-2x.jpg 2x" media="(min-width: 480px)" />
+                      <img src="./portfolio/1.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -104,7 +170,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/2.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/2.jpg 1x, 
+                                                      ./portfolio/2-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/2tab.jpg 1x, 
+                                                      ./portfolio/2tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/2mob.jpg 1x, 
+                                                      ./portfolio/2mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/2.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -122,7 +195,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/3.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/3.jpg 1x, 
+                                                      ./portfolio/3-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/3tab.jpg 1x, 
+                                                      ./portfolio/3tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/3mob.jpg 1x, 
+                                                      ./portfolio/3mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/3.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -140,7 +220,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/4.jpg" alt="фото" width="370" height="294" />
+                  <source srcset="./portfolio/4.jpg 1x, 
+                                                    ./portfolio/4-2x.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="./portfolio/4tab.jpg 1x, 
+                                                    ./portfolio/4tab-2x.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="./portfolio/4mob.jpg 1x, 
+                                                    ./portfolio/4mob-2x.jpg 2x" media="(min-width: 480px)" />
+                  <img src="./portfolio/4.jpg" alt="фото" width="450" />
+                  </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -158,7 +245,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/5.jpg" alt="фото" width="370" height="294" />
+                  <source srcset="./portfolio/5.jpg 1x, 
+                                                    ./portfolio/5-2x.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="./portfolio/5tab.jpg 1x, 
+                                                    ./portfolio/5tab-2x.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="./portfolio/5mob.jpg 1x, 
+                                                    ./portfolio/5mob-2x.jpg 2x" media="(min-width: 480px)" />
+                  <img src="./portfolio/5.jpg" alt="фото" width="450" />
+                  </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -176,7 +270,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/6.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/6.jpg 1x, 
+                                                      ./portfolio/6-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/6tab.jpg 1x, 
+                                                      ./portfolio/6tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/6mob.jpg 1x, 
+                                                      ./portfolio/6mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/6.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -194,7 +295,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/7.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/7.jpg 1x, 
+                                                      ./portfolio/7-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/7tab.jpg 1x, 
+                                                      ./portfolio/7tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/7mob.jpg 1x, 
+                                                      ./portfolio/7mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/7.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -212,7 +320,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/8.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/8.jpg 1x, 
+                                                      ./portfolio/8-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/8tab.jpg 1x, 
+                                                      ./portfolio/8tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/8mob.jpg 1x, 
+                                                      ./portfolio/8mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/8.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -230,7 +345,14 @@
               <li class="our-works-item">
                 <a class="our-works link" href="">
                   <div class="our-wrap">
-                    <img src="./portfolio/9.jpg" alt="фото" width="370" height="294" />
+                    <source srcset="./portfolio/9.jpg 1x, 
+                                                      ./portfolio/9-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./portfolio/9tab.jpg 1x, 
+                                                      ./portfolio/9tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./portfolio/9mob.jpg 1x, 
+                                                      ./portfolio/9mob-2x.jpg 2x" media="(min-width: 480px)" />
+                    <img src="./portfolio/9.jpg" alt="фото" width="450" />
+                    </picture>
                     <p class="our-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                       відвідувачу отримати
                       вичерпні відомості про компанію чи приватну особу.
@@ -314,5 +436,92 @@
         </form>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18" height="18">
+            <use href="./img/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form>
+          <div class="modal-field">
+            <label for="user-name" class="modal-label">Ім'я</label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-label">Телефон</label>
+            <div class="input-wrap">
+              <input
+                type="tel"
+                class="modal-input"
+                name="user-tel"
+                id="user-tel"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-email" class="modal-label">Пошта</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Коментар</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-comment"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <div class="modal-field-chec">
+            <input
+              type="checkbox"
+              class="input-check visually-hidden"
+              name="privacy"
+              value="true"
+              id="privacy"
+            />
+            <label for="privacy" class="check-text">
+              <span>
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./img/symbol-defs.svg#icon-icon-check"></use>
+                </svg>
+              </span>
+              Погоджуюся з розсилкою та приймаю<a class="form-link" href=""> Умови договору</a></label
+            >
+          </div>
+          <button class="form-btn" type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
